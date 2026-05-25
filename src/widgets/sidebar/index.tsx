@@ -14,10 +14,6 @@ const links = [
         label: 'Incidents',
     },
     {
-        to: '/analytics',
-        label: 'Analytics',
-    },
-    {
         to: '/sources',
         label: 'Sources',
     },

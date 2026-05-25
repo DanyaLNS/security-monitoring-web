@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import {api} from "../../shard/api/api.ts";
+import {api} from "../../shared/api/api.ts";
 
 
 export const store = configureStore({
