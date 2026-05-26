@@ -6,7 +6,6 @@ import {DashboardPage} from "../../pages/dashboard/ui/DashboardPage.tsx";
 import {EventsPage} from "../../pages/events/ui/EventsPage.tsx";
 import {IncidentsPage} from "../../pages/incidents/ui/IncidentsPage.tsx";
 import {SourcesPage} from "../../pages/sources/ui/SourcesPage.tsx";
-import {SettingsPage} from "../../pages/settings/ui/SettingsPage.tsx";
 
 export const router = createBrowserRouter([
     {
@@ -28,10 +27,6 @@ export const router = createBrowserRouter([
             {
                 path: 'sources',
                 element: <SourcesPage />,
-            },
-            {
-                path: 'settings',
-                element: <SettingsPage />,
             },
         ],
     },

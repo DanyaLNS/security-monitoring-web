@@ -1,73 +1,301 @@
-# React + TypeScript + Vite
+## Аннотация
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Программа представляет собой клиентскую часть веб-сервиса мониторинга информационной безопасности серверных приложений. Система предназначена для визуализации, анализа и обработки событий безопасности, отображения инцидентов, аналитических данных и результатов корреляции угроз.
+ 
+---
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# 1\. Общие сведения
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Обозначение и наименование программы
 
-## Expanding the ESLint configuration
+Наименование:<br>«Frontend веб-сервиса мониторинга информационной безопасности серверных приложений»
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Обозначение:<br>Security Monitoring Frontend System
+ 
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Программное обеспечение, необходимое для функционирования программы
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Для функционирования программы требуется:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+*   Node.js 20+
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+*   npm / yarn
+
+*   современный веб-браузер:
+
+    *   Google Chrome
+
+    *   Mozilla Firefox
+
+    *   Microsoft Edge
+
+
+---
+
+
+## Языки программирования
+
+Программа разработана с использованием:
+
+
+*   TypeScript
+
+*   JavaScript
+
+*   JSX/TSX
+
+*   HTML
+
+*   CSS
+
+
+---
+
+
+# 2\. Функциональное назначение
+
+Программа предназначена для:
+
+
+*   отображения событий информационной безопасности;
+
+*   анализа инцидентов;
+
+*   визуализации угроз;
+
+*   отображения аналитических панелей;
+
+*   отображения цепочек атак;
+
+*   управления источниками событий;
+
+*   мониторинга активности системы в режиме реального времени.
+
+
+Функциональные ограничения:
+
+
+*   система не выполняет функции IDS/IPS;
+
+*   анализ выполняется на основе поступающих событий;
+
+*   работа системы зависит от доступности backend API.
+
+
+---
+
+
+# 3\. Описание логической структуры
+
+
+## Алгоритм работы программы
+
+Работа frontend-приложения включает:
+
+
+1.  Получение данных от backend API;
+
+2.  Отображение событий безопасности;
+
+3.  Визуализацию аналитических данных;
+
+4.  Формирование представления инцидентов;
+
+5.  Отображение графиков и статистики;
+
+6.  Обновление интерфейса при поступлении новых событий.
+
+
+---
+
+
+## Используемые методы
+
+В программе используются:
+
+
+*   компонентная архитектура React;
+
+*   централизованное управление состоянием Redux Toolkit;
+
+*   REST API взаимодействие;
+
+*   маршрутизация React Router;
+
+*   визуализация данных посредством Recharts;
+
+*   адаптивная верстка TailwindCSS.
+
+
+---
+
+
+## Структура программы
+
+Программа состоит из следующих компонентов:
+
+
+### App Layer
+
+Обеспечивает маршрутизацию и глобальные провайдеры приложения.
+
+
+### Pages
+
+Содержит страницы:
+
+
+*   Dashboard;
+
+*   Events;
+
+*   Incidents;
+
+*   Analytics;
+
+*   Sources;
+
+*   Settings.
+
+
+### Widgets
+
+Содержит переиспользуемые визуальные компоненты:
+
+
+*   таблицы;
+
+*   графики;
+
+*   панели;
+
+*   карточки аналитики.
+
+
+### Shared Layer
+
+Содержит:
+
+
+*   API-клиент;
+
+*   утилиты;
+
+*   mock-данные;
+
+*   типы данных.
+
+
+---
+
+
+## Связи программы с другими программами
+
+Frontend взаимодействует с backend API посредством HTTP REST запросов.
+ 
+---
+
+
+# 4\. Используемые технические средства
+
+Для работы программы используются:
+
+
+*   персональный компьютер;
+
+*   веб-браузер;
+
+*   сервер backend API;
+
+*   сетевое соединение.
+
+
+Минимальные требования:
+
+
+*   ОЗУ: 4 ГБ;
+
+*   процессор x64;
+
+*   разрешение экрана 1366×768.
+
+
+---
+
+
+# 5\. Вызов и загрузка
+
+Запуск программы осуществляется командой:
+
+
+    npm run dev
+
+
+После запуска приложение доступно по адресу:
+
+
+    http://localhost:5173
+
+
+Входной точкой программы является файл:
+
+
+    src/main.tsx
+
+
+---
+
+
+# 6\. Входные данные
+
+Входными данными являются:
+
+
+*   события информационной безопасности;
+
+*   данные источников событий;
+
+*   параметры фильтрации;
+
+*   аналитические данные.
+
+
+Формат входных данных:<br>JSON.
+
+Пример:
+
+
+    {
+      "severity": 8,
+      "type": "auth_failed",
+      "source": "sshd"
+    }
+
+
+---
+
+
+# 7\. Выходные данные
+
+Выходными данными являются:
+
+
+*   визуальные панели мониторинга;
+
+*   таблицы событий;
+
+*   аналитические графики;
+
+*   сведения об инцидентах;
+
+*   визуализация угроз.
+
+
+Формат представления:<br>HTML/CSS интерфейс веб-приложения.
+ 
+---

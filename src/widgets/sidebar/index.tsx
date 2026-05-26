@@ -17,10 +17,6 @@ const links = [
         to: '/sources',
         label: 'Sources',
     },
-    {
-        to: '/settings',
-        label: 'Settings',
-    },
 ]
 
 export const Sidebar = () => {
