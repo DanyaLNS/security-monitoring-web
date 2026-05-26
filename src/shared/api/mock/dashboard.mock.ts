@@ -20,3 +20,18 @@ export const mockDashboard = {
 
     recentEvents: mockEvents,
 }
+
+export const timelineData = [
+    { time: '00:00', events: 4 },
+    { time: '02:00', events: 7 },
+    { time: '04:00', events: 2 },
+    { time: '06:00', events: 12 },
+    { time: '08:00', events: 9 },
+    { time: '10:00', events: 15 },
+    { time: '12:00', events: 20 },
+    { time: '14:00', events: 18 },
+    { time: '16:00', events: 11 },
+    { time: '18:00', events: 14 },
+    { time: '20:00', events: 8 },
+    { time: '22:00', events: 5 },
+]

@@ -26,7 +26,7 @@ export const EventsPage = () => {
             <div className="flex gap-4 items-center">
                 <input
                     className="w-full p-2 bg-zinc-900 border border-zinc-800 rounded"
-                    placeholder="Search events..."
+                    placeholder="Искать события..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                 />
@@ -37,10 +37,10 @@ export const EventsPage = () => {
                         setSeverity(e.target.value ? Number(e.target.value) : null)
                     }
                 >
-                    <option value="">All severity</option>
-                    <option value="3">Low (3+)</option>
-                    <option value="6">Medium (6+)</option>
-                    <option value="8">High (8+)</option>
+                    <option value="">Все</option>
+                    <option value="3">Низкие (3+)</option>
+                    <option value="6">Средние (6+)</option>
+                    <option value="8">Высокие (8+)</option>
                 </select>
             </div>
 
@@ -49,12 +49,12 @@ export const EventsPage = () => {
 
                 {/* HEADER ROW */}
                 <div className="grid grid-cols-6 bg-zinc-900 p-3 text-sm text-zinc-400">
-                    <div>Time</div>
-                    <div>Severity</div>
-                    <div>Title</div>
-                    <div>Type</div>
-                    <div>Source</div>
-                    <div>Host</div>
+                    <div>Время</div>
+                    <div>Угроза</div>
+                    <div>Название</div>
+                    <div>Тип</div>
+                    <div>Источник</div>
+                    <div>Хост</div>
                 </div>
 
                 {/* ROWS */}

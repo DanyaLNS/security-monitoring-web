@@ -18,25 +18,25 @@ export const SourcesPage = () => {
             <div className="flex justify-between items-center">
                 <input
                     className="w-full max-w-md p-2 bg-zinc-900 border border-zinc-800 rounded"
-                    placeholder="Search sources..."
+                    placeholder="Искать источники..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                 />
 
-                <button className="px-4 py-2 bg-green-600 rounded text-white">
-                    + Add Source
-                </button>
+                {/*<button className="px-4 py-2 bg-green-600 rounded text-white">*/}
+                {/*    + Add Source*/}
+                {/*</button>*/}
             </div>
 
             {/* TABLE */}
             <div className="border border-zinc-800 rounded overflow-hidden">
 
                 <div className="grid grid-cols-5 bg-zinc-900 p-3 text-sm text-zinc-400">
-                    <div>Name</div>
-                    <div>Type</div>
-                    <div>Status</div>
-                    <div>Events</div>
-                    <div>Last Seen</div>
+                    <div>Название</div>
+                    <div>Тип</div>
+                    <div>Статус</div>
+                    <div>Событие</div>
+                    <div>Произошло</div>
                 </div>
 
                 {filtered.map(s => (

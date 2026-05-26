@@ -3,19 +3,19 @@ import { NavLink } from 'react-router-dom'
 const links = [
     {
         to: '/',
-        label: 'Dashboard',
+        label: 'Дашборд',
     },
     {
         to: '/events',
-        label: 'Events',
+        label: 'События',
     },
     {
         to: '/incidents',
-        label: 'Incidents',
+        label: 'Инциденты',
     },
     {
         to: '/sources',
-        label: 'Sources',
+        label: 'Источники',
     },
 ]
 

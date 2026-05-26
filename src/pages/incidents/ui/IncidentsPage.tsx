@@ -88,7 +88,7 @@ export const IncidentsPage = () => {
                     </div>
                 ) : (
                     <div className="text-zinc-500">
-                        Select incident
+                        Выберите инцидент
                     </div>
                 )}
             </div>
